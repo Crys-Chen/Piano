@@ -1,0 +1,120 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Nov  8 16:49:54 2022
+| Host         : 马华PC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Piano_top_control_sets_placed.rpt
+| Design       : Piano_top
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    42 |
+|    Minimum number of control sets                        |    42 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   233 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    42 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |    32 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              35 |           17 |
+| No           | No                    | Yes                    |              13 |            9 |
+| No           | Yes                   | No                     |             114 |           43 |
+| Yes          | No                    | No                     |              11 |           10 |
+| Yes          | No                    | Yes                    |              10 |            8 |
+| Yes          | Yes                   | No                     |             280 |          127 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+---------------------------------+---------------------------------+------------------+----------------+
+|   Clock Signal  |          Enable Signal          |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------+---------------------------------+---------------------------------+------------------+----------------+
+|  U5/change      |                                 |                                 |                1 |              1 |
+|  U1/S[0]        |                                 |                                 |                1 |              1 |
+|  CP_IBUF_BUFG   |                                 | clr_IBUF                        |                1 |              2 |
+|  U1/CLK         |                                 | U2/U/X[4]_i_1_n_0               |                2 |              5 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[14][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[8][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  U1/Q_BUFG[0]   | U7/vsenable                     | clr_IBUF                        |                8 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[23][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[10][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[11][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                6 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[12][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[13][9]_i_2_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[15][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[17][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[16][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[19][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[18][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[1][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[20][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[21][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[22][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                6 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[6][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[26][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[25][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[24][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                6 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[27][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[2][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[28][9]_i_1_n_0 | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[3][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[4][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                4 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[7][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[5][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                5 |             10 |
+|  CP_rhythm_BUFG | U8/U3/bar_bottom[9][9]_i_1_n_0  | U8/U3/bar_bottom[13][9]_i_1_n_0 |                3 |             10 |
+|  CP_rhythm_BUFG | U3/frequency0                   |                                 |               10 |             11 |
+|  CP_rhythm_BUFG |                                 | U3/frequency1                   |                7 |             11 |
+|  U1/Q_BUFG[0]   |                                 | clr_IBUF                        |                8 |             11 |
+|  U1/Q_BUFG[0]   |                                 |                                 |                7 |             12 |
+|  CP_IBUF_BUFG   |                                 | U1/count2[0]_i_1_n_0            |                6 |             21 |
+|  CP_IBUF_BUFG   |                                 |                                 |                8 |             21 |
+|  CP_rhythm_BUFG |                                 | U8/U3/bar_bottom[13][9]_i_1_n_0 |               13 |             21 |
+|  CP_IBUF_BUFG   |                                 | U1/count3[0]_i_1_n_0            |                7 |             25 |
+|  CP_IBUF_BUFG   |                                 | U5/count1_carry__3_n_7          |                8 |             31 |
++-----------------+---------------------------------+---------------------------------+------------------+----------------+
+
+

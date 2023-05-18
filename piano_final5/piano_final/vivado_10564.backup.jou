@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Nov  5 18:59:26 2022
+# Process ID: 10564
+# Current directory: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7336 C:\Users\Winter\Desktop\vivado\Homework\Week8-10\piano_final4\piano_final\piano_final.xpr
+# Log file: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/vivado.log
+# Journal file: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/Piano_key.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/Piano_key.v
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+close_hw
+export_ip_user_files -of_objects  [get_files C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/Select_mode.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/Select_mode.v
+add_files -norecurse {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/VGA_640x480.v C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/VGA_picture.v C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/Code/Select_frequency.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final4/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

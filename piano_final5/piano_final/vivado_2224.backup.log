@@ -1,0 +1,275 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov 11 09:19:34 2022
+# Process ID: 2224
+# Current directory: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16016 C:\Users\Winter\Desktop\vivado\Homework\Week8-10\piano_final5\piano_final\piano_final.xpr
+# Log file: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/vivado.log
+# Journal file: C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/piano_final.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Software/Xilinx/Vivado/2019.1/data/ip'.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 888.066 ; gain = 9.016
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B0414AA
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+update_compile_order -fileset sources_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/piano_final.runs/impl_1/Piano_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: Piano_top
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2398.035 ; gain = 175.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Piano_top' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Piano_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Clkdiv' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Clkdiv.v:1]
+	Parameter N bound to: 99999999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Clkdiv' (1#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Clkdiv.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Free_play' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Free_play.v:1]
+	Parameter do bound to: 5'b10000 
+	Parameter re bound to: 5'b01000 
+	Parameter mi bound to: 5'b00100 
+	Parameter so bound to: 5'b00010 
+	Parameter la bound to: 5'b00001 
+	Parameter low_origin bound to: 3'b100 
+	Parameter low_up bound to: 3'b101 
+	Parameter middle_origin bound to: 3'b000 
+	Parameter middle_up bound to: 3'b001 
+	Parameter high_origin bound to: 3'b010 
+	Parameter high_up bound to: 3'b011 
+	Parameter low_do bound to: 262 - type: integer 
+	Parameter middle_do bound to: 523 - type: integer 
+	Parameter high_do bound to: 1046 - type: integer 
+	Parameter low_re bound to: 294 - type: integer 
+	Parameter middle_re bound to: 587 - type: integer 
+	Parameter high_re bound to: 1175 - type: integer 
+	Parameter low_mi bound to: 330 - type: integer 
+	Parameter middle_mi bound to: 659 - type: integer 
+	Parameter high_mi bound to: 1318 - type: integer 
+	Parameter low_fa bound to: 349 - type: integer 
+	Parameter middle_fa bound to: 699 - type: integer 
+	Parameter high_fa bound to: 1398 - type: integer 
+	Parameter low_so bound to: 392 - type: integer 
+	Parameter middle_so bound to: 784 - type: integer 
+	Parameter high_so bound to: 1569 - type: integer 
+	Parameter low_la bound to: 440 - type: integer 
+	Parameter middle_la bound to: 880 - type: integer 
+	Parameter high_la bound to: 1762 - type: integer 
+	Parameter low_xi bound to: 494 - type: integer 
+	Parameter middle_xi bound to: 988 - type: integer 
+	Parameter high_xi bound to: 1977 - type: integer 
+	Parameter silence bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Key_dejitter' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Key_dejitter.v:1]
+	Parameter N bound to: 99999999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Key_dejitter' (2#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Key_dejitter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Free_play' (3#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Free_play.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Auto_play' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Auto_play.v:1]
+	Parameter N bound to: 99999999 - type: integer 
+	Parameter low_do bound to: 262 - type: integer 
+	Parameter middle_do bound to: 523 - type: integer 
+	Parameter high_do bound to: 1046 - type: integer 
+	Parameter low_re bound to: 294 - type: integer 
+	Parameter middle_re bound to: 587 - type: integer 
+	Parameter high_re bound to: 1175 - type: integer 
+	Parameter low_mi bound to: 330 - type: integer 
+	Parameter middle_mi bound to: 659 - type: integer 
+	Parameter high_mi bound to: 1318 - type: integer 
+	Parameter low_fa bound to: 349 - type: integer 
+	Parameter middle_fa bound to: 699 - type: integer 
+	Parameter high_fa bound to: 1398 - type: integer 
+	Parameter low_so bound to: 392 - type: integer 
+	Parameter middle_so bound to: 784 - type: integer 
+	Parameter high_so bound to: 1569 - type: integer 
+	Parameter low_la bound to: 440 - type: integer 
+	Parameter middle_la bound to: 880 - type: integer 
+	Parameter high_la bound to: 1762 - type: integer 
+	Parameter low_xi bound to: 494 - type: integer 
+	Parameter middle_xi bound to: 988 - type: integer 
+	Parameter high_xi bound to: 1977 - type: integer 
+	Parameter silence bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Auto_play' (4#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Auto_play.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Select_frequency' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Select_frequency.v:1]
+	Parameter silence bound to: 1999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Select_frequency' (5#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Select_frequency.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Generate_melody' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Generate_Melody.v:1]
+	Parameter N bound to: 99999999 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Generate_melody' (6#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Generate_Melody.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Display_melody' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Display_melody.v:1]
+	Parameter low bound to: 2'b10 
+	Parameter middle bound to: 2'b00 
+	Parameter high bound to: 2'b01 
+	Parameter low_do bound to: 262 - type: integer 
+	Parameter middle_do bound to: 523 - type: integer 
+	Parameter high_do bound to: 1046 - type: integer 
+	Parameter low_re bound to: 294 - type: integer 
+	Parameter middle_re bound to: 587 - type: integer 
+	Parameter high_re bound to: 1175 - type: integer 
+	Parameter low_mi bound to: 330 - type: integer 
+	Parameter middle_mi bound to: 659 - type: integer 
+	Parameter high_mi bound to: 1318 - type: integer 
+	Parameter low_fa bound to: 349 - type: integer 
+	Parameter middle_fa bound to: 699 - type: integer 
+	Parameter high_fa bound to: 1398 - type: integer 
+	Parameter low_so bound to: 392 - type: integer 
+	Parameter middle_so bound to: 784 - type: integer 
+	Parameter high_so bound to: 1569 - type: integer 
+	Parameter low_la bound to: 440 - type: integer 
+	Parameter middle_la bound to: 880 - type: integer 
+	Parameter high_la bound to: 1762 - type: integer 
+	Parameter low_xi bound to: 494 - type: integer 
+	Parameter middle_xi bound to: 988 - type: integer 
+	Parameter high_xi bound to: 1977 - type: integer 
+	Parameter silence bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Display_melody.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'Display_melody' (7#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Display_melody.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA_640x480' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/vga_640x480.v:1]
+	Parameter hpixels bound to: 10'b1100100000 
+	Parameter vlines bound to: 10'b1000001001 
+	Parameter hbp bound to: 10'b0010010000 
+	Parameter hfp bound to: 10'b1100010000 
+	Parameter vbp bound to: 10'b0000011111 
+	Parameter vfp bound to: 10'b0111111111 
+INFO: [Synth 8-6155] done synthesizing module 'VGA_640x480' (8#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/vga_640x480.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VGA_picture' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Vga_picture.v:1]
+	Parameter hbp bound to: 10'b0010010000 
+	Parameter hfp bound to: 10'b1100010000 
+	Parameter vbp bound to: 10'b0000011111 
+	Parameter vfp bound to: 10'b0111111111 
+	Parameter W bound to: 640 - type: integer 
+	Parameter H bound to: 189 - type: integer 
+	Parameter press_top bound to: 431 - type: integer 
+	Parameter press_bottom bound to: 451 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'silence' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/.Xil/Vivado-2224-马华PC/realtime/silence_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'silence' (9#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/.Xil/Vivado-2224-马华PC/realtime/silence_stub.v:6]
+WARNING: [Synth 8-689] width (17) of port connection 'dina' does not match port width (12) of module 'silence' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Vga_picture.v:35]
+INFO: [Synth 8-6157] synthesizing module 'Press_signal' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Press_signal.v:1]
+	Parameter low_do bound to: 262 - type: integer 
+	Parameter middle_do bound to: 523 - type: integer 
+	Parameter high_do bound to: 1046 - type: integer 
+	Parameter low_re bound to: 294 - type: integer 
+	Parameter middle_re bound to: 587 - type: integer 
+	Parameter high_re bound to: 1175 - type: integer 
+	Parameter low_mi bound to: 330 - type: integer 
+	Parameter middle_mi bound to: 659 - type: integer 
+	Parameter high_mi bound to: 1318 - type: integer 
+	Parameter low_fa bound to: 349 - type: integer 
+	Parameter middle_fa bound to: 699 - type: integer 
+	Parameter high_fa bound to: 1398 - type: integer 
+	Parameter low_so bound to: 392 - type: integer 
+	Parameter middle_so bound to: 784 - type: integer 
+	Parameter high_so bound to: 1569 - type: integer 
+	Parameter low_la bound to: 440 - type: integer 
+	Parameter middle_la bound to: 880 - type: integer 
+	Parameter high_la bound to: 1762 - type: integer 
+	Parameter low_xi bound to: 494 - type: integer 
+	Parameter middle_xi bound to: 988 - type: integer 
+	Parameter high_xi bound to: 1977 - type: integer 
+	Parameter silence bound to: 1 - type: integer 
+	Parameter hbp bound to: 10'b0010010000 
+	Parameter hfp bound to: 10'b1100010000 
+	Parameter vbp bound to: 10'b0000011111 
+	Parameter vfp bound to: 10'b0111111111 
+INFO: [Synth 8-6155] done synthesizing module 'Press_signal' (10#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Press_signal.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Bar' [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Bar.v:1]
+	Parameter N bound to: 99999999 - type: integer 
+	Parameter move_length bound to: 25 - type: integer 
+	Parameter vbp bound to: 10'b0000011111 
+	Parameter vfp bound to: 10'b0111111111 
+	Parameter low_do bound to: 149 - type: integer 
+	Parameter middle_do bound to: 362 - type: integer 
+	Parameter high_do bound to: 575 - type: integer 
+	Parameter low_re bound to: 180 - type: integer 
+	Parameter middle_re bound to: 395 - type: integer 
+	Parameter high_re bound to: 606 - type: integer 
+	Parameter low_mi bound to: 210 - type: integer 
+	Parameter middle_mi bound to: 423 - type: integer 
+	Parameter high_mi bound to: 637 - type: integer 
+	Parameter low_fa bound to: 241 - type: integer 
+	Parameter middle_fa bound to: 454 - type: integer 
+	Parameter high_fa bound to: 667 - type: integer 
+	Parameter low_so bound to: 271 - type: integer 
+	Parameter middle_so bound to: 484 - type: integer 
+	Parameter high_so bound to: 697 - type: integer 
+	Parameter low_la bound to: 301 - type: integer 
+	Parameter middle_la bound to: 515 - type: integer 
+	Parameter high_la bound to: 728 - type: integer 
+	Parameter low_xi bound to: 332 - type: integer 
+	Parameter middle_xi bound to: 545 - type: integer 
+	Parameter high_xi bound to: 758 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Bar' (11#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Bar.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_picture' (12#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Vga_picture.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Piano_top' (13#1) [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/Piano_top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2450.145 ; gain = 227.941
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2469.059 ; gain = 246.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2469.059 ; gain = 246.855
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/piano_final/piano_final.srcs/sources_1/ip/silence/silence.dcp' for cell 'U8/U1'
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 5 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 5 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/piano_cntr.xdc]
+Finished Parsing XDC File [C:/Users/Winter/Desktop/vivado/Homework/Week8-10/piano_final5/Code/piano_cntr.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2605.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2705.820 ; gain = 483.617
+37 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:15 . Memory (MB): peak = 2705.820 ; gain = 671.152
+close_design
+close_hw
